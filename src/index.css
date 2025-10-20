@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+
+
+@layer components {
+  .game-button {
+    @apply px-4 py-2 bg-game-primary text-white rounded-lg hover:bg-game-secondary transition-colors duration-200 font-medium;
+  }
+
+  .game-card {
+    @apply bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 border border-gray-700 hover:border-game-primary;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-game-primary focus:border-transparent;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-300 mb-1;
+  }
+}
+
+@keyframes confetti {
+   0% { transform: translateY(0) rotate(0deg); }
+   100% { transform: translateY(100vh) rotate(360deg); }
+ }
+   .animate-confetti {
+     animation: confetti 3s linear forwards;
+  }
